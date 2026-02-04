@@ -7,7 +7,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'
 from config.base_class import BaseClass
 from screens.add_task_screen import AddTaskScreen
 from screens.home_screen import HomeScreen
-from pytest_bdd import scenarios, given, when, then, parsers
+from pytest_bdd import scenarios, given, when, then
 import pytest
 
 scenarios("./featurefiles/ManageTodotasks.feature")
@@ -66,7 +66,7 @@ def step_add_todo_task_required_details(app_context):
     add_task_screen.add_sub_task("Sub task 1")
     add_task_screen.click_on_done()
 
-@then("The task should should be added in the Work Folder")
+@then("The task should be added in the Work Folder")
 def step_verify_added_task(app_context):
     home_screen = app_context["home_screen"]
     task_title = home_screen.get_created_task_title()

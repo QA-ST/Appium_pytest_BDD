@@ -6,7 +6,7 @@ Feature: Add and manage Todo tasks
     Given I launch the app
     When I add a new task with name "Test Task" and select folder as Work
     And Select priority, date, reminder, comment, and subtask
-    Then The task should should be added in the Work Folder
+    Then The task should be added in the Work Folder
 
   Scenario: Edit Created Task
     Given I have a task
